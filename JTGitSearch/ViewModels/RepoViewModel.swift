@@ -8,19 +8,19 @@
 
 import Foundation
 
-protocol RepoDetail{
+public protocol RepoDetail{
     var repo: Repository {get set}
     var image: URL? { get }
     var name: String? {get }
     var description: String? {get }
     var htmlUrl: String? {get }
     var author: String? {get }
-    var forks: Int? {get }
-    var stars: Int? {get }
+    var forks: String? {get }
+    var stars: String? {get }
     var language: String? {get }
 }
 
-extension RepoDetail{
+public extension RepoDetail{
     var image: URL? {
         return URL(string: repo.owner.avatarURL)
     }
@@ -34,16 +34,19 @@ extension RepoDetail{
         return repo.htmlURL
     }
     var author: String? {
-        return repo.owner.login
+        return "By: " + repo.owner.login
     }
-    var forks: Int? {
-        return repo.forks
+    var forks: String? {
+        return "Forks: \(repo.forks)"
     }
-    var stars: Int? {
-        return repo.stargazersCount
+    var stars: String? {
+        return "Stars: \(repo.stargazersCount)"
     }
     var language: String? {
-        return repo.language
+        if let lang = repo.language{
+            return "Language: " + lang
+        }
+        return ""
     }
 }
 

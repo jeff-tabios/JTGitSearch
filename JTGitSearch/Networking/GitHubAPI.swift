@@ -9,7 +9,7 @@
 import Foundation
 
 enum GitHubAPI {
-    case search(q:String,page:Int,sort:String,order:String)
+    case search(q:String,page:Int?,sort:String?,order:String?)
 }
 
 extension GitHubAPI: EndPoint {
@@ -39,14 +39,14 @@ extension GitHubAPI: EndPoint {
             
             items["q"]=q
             
-            if page > 0{
+            if let page = page, page > 0{
                 items["page"]="\(page)"
             }
             
-            if !sort.isEmpty {
+            if let sort = sort, !sort.isEmpty {
                 items["sort"]=sort
                 
-                if !order.isEmpty {
+                if let order = order, !order.isEmpty {
                     items["order"]=order
                 }
             }

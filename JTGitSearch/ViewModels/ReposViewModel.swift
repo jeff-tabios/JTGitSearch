@@ -52,15 +52,17 @@ class ReposViewModel: AppendableList {
     }
     
     func getNextPage(){
-        api?.request(endPoint: GitHubAPI.search(q: query, page: lastPageLoaded+1, sort: sort, order: order),
-                     completion: { [weak self] (result:Result<Repositories,APIServiceError>) in
-                        switch result{
-                        case .success(let repos):
-                            self?.lastPageLoaded += 1
-                            self?.RepoViewModels += repos.items.map{RepoViewModel(repo: $0)}
-                        case .failure:
-                            break
-                        }
-        })
+        if !query.isEmpty{
+            api?.request(endPoint: GitHubAPI.search(q: query, page: lastPageLoaded+1, sort: sort, order: order),
+                         completion: { [weak self] (result:Result<Repositories,APIServiceError>) in
+                            switch result{
+                            case .success(let repos):
+                                self?.lastPageLoaded += 1
+                                self?.RepoViewModels += repos.items.map{RepoViewModel(repo: $0)}
+                            case .failure:
+                                break
+                            }
+            })
+        }
     }
 }

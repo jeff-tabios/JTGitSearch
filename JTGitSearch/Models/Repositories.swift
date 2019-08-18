@@ -25,7 +25,7 @@ public struct Repository: Codable {
     let name: String
     let owner: Owner
     let htmlURL: String
-    let itemDescription: String
+    let itemDescription: String?
     let forks, stargazersCount: Int
     let language: String?
     enum CodingKeys: String, CodingKey {

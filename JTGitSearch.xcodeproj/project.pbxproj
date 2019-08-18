@@ -10,6 +10,7 @@
 		626C36AF2308DB7500B2C8E2 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996952308CDF5008C7DF8 /* URLSessionMock.swift */; };
 		626C36B02308DB7900B2C8E2 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996932308CDCF008C7DF8 /* URLSessionDataTaskMock.swift */; };
 		626C36B12308DB7C00B2C8E2 /* MockResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 62F996822307928E008C7DF8 /* MockResults.json */; };
+		626C36B32308E71500B2C8E2 /* ReposViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36B22308E71500B2C8E2 /* ReposViewModelTests.swift */; };
 		62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */; };
 		62F9962D2306DBF7008C7DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962C2306DBF7008C7DF8 /* ViewController.swift */; };
 		62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F996312306DBF9008C7DF8 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		626C36B22308E71500B2C8E2 /* ReposViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModelTests.swift; sourceTree = "<group>"; };
 		62F996272306DBF6008C7DF8 /* JTGitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTGitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F9962C2306DBF7008C7DF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		62F9963E2306DBFA008C7DF8 /* JTGitSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				626C36B22308E71500B2C8E2 /* ReposViewModelTests.swift */,
 				62F99691230824BB008C7DF8 /* RepoViewModelTests.swift */,
 				62F9967E23070900008C7DF8 /* APITests.swift */,
 				62F996412306DBFA008C7DF8 /* Info.plist */,
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626C36B32308E71500B2C8E2 /* ReposViewModelTests.swift in Sources */,
 				62F99692230824BB008C7DF8 /* RepoViewModelTests.swift in Sources */,
 				62F9967F23070900008C7DF8 /* APITests.swift in Sources */,
 			);

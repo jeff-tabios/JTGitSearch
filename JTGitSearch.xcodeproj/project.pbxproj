@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		626C36AF2308DB7500B2C8E2 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996952308CDF5008C7DF8 /* URLSessionMock.swift */; };
+		626C36B02308DB7900B2C8E2 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996932308CDCF008C7DF8 /* URLSessionDataTaskMock.swift */; };
+		626C36B12308DB7C00B2C8E2 /* MockResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 62F996822307928E008C7DF8 /* MockResults.json */; };
 		62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */; };
 		62F9962D2306DBF7008C7DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962C2306DBF7008C7DF8 /* ViewController.swift */; };
-		62F996302306DBF7008C7DF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F9962E2306DBF7008C7DF8 /* Main.storyboard */; };
 		62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F996312306DBF9008C7DF8 /* Assets.xcassets */; };
 		62F996352306DBF9008C7DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */; };
 		62F996742307049E008C7DF8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996732307049E008C7DF8 /* API.swift */; };
 		62F99676230704C5008C7DF8 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F99675230704C5008C7DF8 /* EndPoint.swift */; };
 		62F99678230704E4008C7DF8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F99677230704E3008C7DF8 /* HTTPMethod.swift */; };
-		62F9967A23070509008C7DF8 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9967923070509008C7DF8 /* MockAPI.swift */; };
 		62F9967C230706B2008C7DF8 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9967B230706B2008C7DF8 /* GitHubAPI.swift */; };
 		62F9967F23070900008C7DF8 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9967E23070900008C7DF8 /* APITests.swift */; };
 		62F9968123078DF6008C7DF8 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9968023078DF6008C7DF8 /* Repositories.swift */; };
-		62F9968623079B82008C7DF8 /* MockResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 62F996822307928E008C7DF8 /* MockResults.json */; };
+		62F9968C2308154E008C7DF8 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9968B2308154E008C7DF8 /* ReposViewModel.swift */; };
+		62F9968E2308159B008C7DF8 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9968D2308159B008C7DF8 /* RepoViewModel.swift */; };
+		62F99692230824BB008C7DF8 /* RepoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F99691230824BB008C7DF8 /* RepoViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 		62F996272306DBF6008C7DF8 /* JTGitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTGitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F9962C2306DBF7008C7DF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		62F9962F2306DBF7008C7DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62F996312306DBF9008C7DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62F996342306DBF9008C7DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62F996362306DBF9008C7DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,11 +47,15 @@
 		62F996732307049E008C7DF8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		62F99675230704C5008C7DF8 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		62F99677230704E3008C7DF8 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		62F9967923070509008C7DF8 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		62F9967B230706B2008C7DF8 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		62F9967E23070900008C7DF8 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		62F9968023078DF6008C7DF8 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		62F996822307928E008C7DF8 /* MockResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockResults.json; sourceTree = "<group>"; };
+		62F9968B2308154E008C7DF8 /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
+		62F9968D2308159B008C7DF8 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
+		62F99691230824BB008C7DF8 /* RepoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModelTests.swift; sourceTree = "<group>"; };
+		62F996932308CDCF008C7DF8 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		62F996952308CDF5008C7DF8 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +113,8 @@
 		62F9963E2306DBFA008C7DF8 /* JTGitSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				62F996882307F169008C7DF8 /* UnitTests */,
-				62F996872307F15B008C7DF8 /* IntegrationTests */,
+				62F99691230824BB008C7DF8 /* RepoViewModelTests.swift */,
+				62F9967E23070900008C7DF8 /* APITests.swift */,
 				62F996412306DBFA008C7DF8 /* Info.plist */,
 			);
 			path = JTGitSearchTests;
@@ -134,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				62F996822307928E008C7DF8 /* MockResults.json */,
+				62F996932308CDCF008C7DF8 /* URLSessionDataTaskMock.swift */,
+				62F996952308CDF5008C7DF8 /* URLSessionMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -141,7 +149,6 @@
 		62F9964D2306EF77008C7DF8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				62F9962E2306DBF7008C7DF8 /* Main.storyboard */,
 				62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -150,6 +157,8 @@
 		62F9964E2306EF7F008C7DF8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				62F9968B2308154E008C7DF8 /* ReposViewModel.swift */,
+				62F9968D2308159B008C7DF8 /* RepoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -185,24 +194,8 @@
 				62F996732307049E008C7DF8 /* API.swift */,
 				62F99675230704C5008C7DF8 /* EndPoint.swift */,
 				62F99677230704E3008C7DF8 /* HTTPMethod.swift */,
-				62F9967923070509008C7DF8 /* MockAPI.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		62F996872307F15B008C7DF8 /* IntegrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				62F9967E23070900008C7DF8 /* APITests.swift */,
-			);
-			path = IntegrationTests;
-			sourceTree = "<group>";
-		};
-		62F996882307F169008C7DF8 /* UnitTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62F9968623079B82008C7DF8 /* MockResults.json in Resources */,
 				62F996352306DBF9008C7DF8 /* LaunchScreen.storyboard in Resources */,
 				62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */,
-				62F996302306DBF7008C7DF8 /* Main.storyboard in Resources */,
+				626C36B12308DB7C00B2C8E2 /* MockResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,11 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626C36AF2308DB7500B2C8E2 /* URLSessionMock.swift in Sources */,
+				626C36B02308DB7900B2C8E2 /* URLSessionDataTaskMock.swift in Sources */,
+				62F9968E2308159B008C7DF8 /* RepoViewModel.swift in Sources */,
 				62F9962D2306DBF7008C7DF8 /* ViewController.swift in Sources */,
 				62F996742307049E008C7DF8 /* API.swift in Sources */,
 				62F99676230704C5008C7DF8 /* EndPoint.swift in Sources */,
 				62F99678230704E4008C7DF8 /* HTTPMethod.swift in Sources */,
-				62F9967A23070509008C7DF8 /* MockAPI.swift in Sources */,
+				62F9968C2308154E008C7DF8 /* ReposViewModel.swift in Sources */,
 				62F9968123078DF6008C7DF8 /* Repositories.swift in Sources */,
 				62F9967C230706B2008C7DF8 /* GitHubAPI.swift in Sources */,
 				62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */,
@@ -323,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F99692230824BB008C7DF8 /* RepoViewModelTests.swift in Sources */,
 				62F9967F23070900008C7DF8 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,14 +334,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		62F9962E2306DBF7008C7DF8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62F9962F2306DBF7008C7DF8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

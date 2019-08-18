@@ -11,8 +11,11 @@
 		626C36B02308DB7900B2C8E2 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996932308CDCF008C7DF8 /* URLSessionDataTaskMock.swift */; };
 		626C36B12308DB7C00B2C8E2 /* MockResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 62F996822307928E008C7DF8 /* MockResults.json */; };
 		626C36B32308E71500B2C8E2 /* ReposViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36B22308E71500B2C8E2 /* ReposViewModelTests.swift */; };
+		626C36B62308F5EC00B2C8E2 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36B52308F5EC00B2C8E2 /* UIImageView+Cache.swift */; };
+		626C36C72308F9E800B2C8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626C36C62308F9E800B2C8E2 /* Main.storyboard */; };
+		626C36C9230901BF00B2C8E2 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36C8230901BF00B2C8E2 /* ReposViewController.swift */; };
+		626C36CB2309051300B2C8E2 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36CA2309051300B2C8E2 /* ListCell.swift */; };
 		62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */; };
-		62F9962D2306DBF7008C7DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962C2306DBF7008C7DF8 /* ViewController.swift */; };
 		62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F996312306DBF9008C7DF8 /* Assets.xcassets */; };
 		62F996352306DBF9008C7DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */; };
 		62F996742307049E008C7DF8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F996732307049E008C7DF8 /* API.swift */; };
@@ -38,9 +41,12 @@
 
 /* Begin PBXFileReference section */
 		626C36B22308E71500B2C8E2 /* ReposViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModelTests.swift; sourceTree = "<group>"; };
+		626C36B52308F5EC00B2C8E2 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		626C36C62308F9E800B2C8E2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		626C36C8230901BF00B2C8E2 /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		626C36CA2309051300B2C8E2 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		62F996272306DBF6008C7DF8 /* JTGitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTGitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		62F9962C2306DBF7008C7DF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62F996312306DBF9008C7DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62F996342306DBF9008C7DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62F996362306DBF9008C7DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		626C36B42308F5AF00B2C8E2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				626C36B52308F5EC00B2C8E2 /* UIImageView+Cache.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		62F9961E2306DBF6008C7DF8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +117,7 @@
 				62F996512306EF97008C7DF8 /* Models */,
 				62F9964F2306EF88008C7DF8 /* Views */,
 				62F9964E2306EF7F008C7DF8 /* ViewModels */,
+				626C36B42308F5AF00B2C8E2 /* Helper */,
 				62F9967123070432008C7DF8 /* Networking */,
 				62F9964D2306EF77008C7DF8 /* Storyboards */,
 				62F9964C2306EF70008C7DF8 /* Mock */,
@@ -152,6 +167,7 @@
 		62F9964D2306EF77008C7DF8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				626C36C62308F9E800B2C8E2 /* Main.storyboard */,
 				62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -169,7 +185,8 @@
 		62F9964F2306EF88008C7DF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				62F9962C2306DBF7008C7DF8 /* ViewController.swift */,
+				626C36C8230901BF00B2C8E2 /* ReposViewController.swift */,
+				626C36CA2309051300B2C8E2 /* ListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +303,7 @@
 				62F996352306DBF9008C7DF8 /* LaunchScreen.storyboard in Resources */,
 				62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */,
 				626C36B12308DB7C00B2C8E2 /* MockResults.json in Resources */,
+				626C36C72308F9E800B2C8E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,11 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626C36C9230901BF00B2C8E2 /* ReposViewController.swift in Sources */,
 				626C36AF2308DB7500B2C8E2 /* URLSessionMock.swift in Sources */,
 				626C36B02308DB7900B2C8E2 /* URLSessionDataTaskMock.swift in Sources */,
 				62F9968E2308159B008C7DF8 /* RepoViewModel.swift in Sources */,
-				62F9962D2306DBF7008C7DF8 /* ViewController.swift in Sources */,
 				62F996742307049E008C7DF8 /* API.swift in Sources */,
+				626C36CB2309051300B2C8E2 /* ListCell.swift in Sources */,
+				626C36B62308F5EC00B2C8E2 /* UIImageView+Cache.swift in Sources */,
 				62F99676230704C5008C7DF8 /* EndPoint.swift in Sources */,
 				62F99678230704E4008C7DF8 /* HTTPMethod.swift in Sources */,
 				62F9968C2308154E008C7DF8 /* ReposViewModel.swift in Sources */,

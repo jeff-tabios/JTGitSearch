@@ -49,18 +49,18 @@ class RepoViewModelTests: XCTestCase {
     }
     
     func test_author(){
-        XCTAssertEqual(repositories?.items[0].owner.login, sut?.author)
+        XCTAssertEqual("By: \((repositories?.items[0].owner.login)!)", sut?.author)
     }
     
     func test_forks(){
-        XCTAssertEqual(repositories?.items[0].forks, sut?.forks)
+        XCTAssertEqual("Forks: \((repositories?.items[0].forks)!)", sut?.forks)
     }
     
     func test_stars(){
-        XCTAssertEqual(repositories?.items[0].stargazersCount, sut?.stars)
+        XCTAssertEqual("Stars: \((repositories?.items[0].stargazersCount)!)", sut?.stars)
     }
     
     func test_language(){
-        XCTAssertEqual(repositories?.items[0].language, sut?.language)
+        XCTAssertEqual("Language: \((repositories?.items[0].language)!)", sut?.language)
     }
 }

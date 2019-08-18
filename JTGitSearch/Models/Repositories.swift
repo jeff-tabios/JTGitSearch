@@ -21,7 +21,7 @@ struct Repositories: Codable {
     }
 }
 
-struct Repository: Codable {
+public struct Repository: Codable {
     let name: String
     let owner: Owner
     let htmlURL: String

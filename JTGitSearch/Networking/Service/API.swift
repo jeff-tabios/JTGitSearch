@@ -25,9 +25,13 @@ protocol APIProtocol{
 
 class API:APIProtocol{
     
-    let defaultSession = URLSession(configuration: .default)
+    var session:URLSession // = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     var data: Data?
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
     
     func request<U:Codable>(endPoint: EndPoint, completion: @escaping (Result<U,APIServiceError>)->Void){
         
@@ -41,7 +45,7 @@ class API:APIProtocol{
             }
             
             dataTask =
-                defaultSession.dataTask(with: url) { [weak self] data, response, error in
+                session.dataTask(with: url) { [weak self] data, response, error in
                     defer {
                         self?.dataTask = nil
                     }
@@ -51,7 +55,8 @@ class API:APIProtocol{
                     } else if
                         let data = data,
                         let response = response as? HTTPURLResponse,
-                        response.statusCode == 200 {
+                        response.statusCode == 200
+                    {
                         self?.data = data
                         self?.decode(completion: completion)
                     }else{

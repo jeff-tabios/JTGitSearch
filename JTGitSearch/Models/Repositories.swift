@@ -12,7 +12,7 @@ import Foundation
 struct Repositories: Codable {
     let totalCount: Int
     let incompleteResults: Bool
-    let items: [Item]
+    let items: [Repository]
     
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
@@ -22,7 +22,7 @@ struct Repositories: Codable {
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct Repository: Codable {
     let id: Int
     let nodeID, name, fullName: String
     let itemPrivate: Bool

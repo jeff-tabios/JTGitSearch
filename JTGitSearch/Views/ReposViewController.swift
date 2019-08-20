@@ -11,10 +11,14 @@ import UIKit
 class ReposViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var sortButton: UIButton!
+    @IBOutlet weak var searchSettings: UIView!
+    @IBOutlet weak var sortBy: UISegmentedControl!
+    @IBOutlet weak var orderBy: UISegmentedControl!
+    
+    var viewModel = ReposViewModel(api: API())
+//    var viewModel = ReposViewModel(api: API(session: URLSessionMock()))
     let searchBar = UISearchBar()
-    //    var viewModel = ReposViewModel(api: API())
-    var viewModel = ReposViewModel(api: API(session: URLSessionMock()))
+    let spinner = UIActivityIndicatorView(style: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,27 +27,43 @@ class ReposViewController: UIViewController {
     
     func setupViews(){
         viewModel.reload(with: "dragons")
+        viewModel.startGetRepoList = { [weak self] () in
+            self?.tableView.tableFooterView?.isHidden = false
+        }
         viewModel.refreshRepoList = { [weak self] () in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
+                self?.tableView.tableFooterView?.isHidden = true
             }
+        }
+        viewModel.failGetRepoList = { [weak self] () in
+            self?.showWarning()
+            self?.tableView.tableFooterView?.isHidden = true
         }
         searchBar.delegate = self
         navigationItem.titleView = searchBar
-        sortButton.layer.cornerRadius = 22
-    }
-    
-    @IBAction func sort(_ sender: Any) {
+        searchSettings.isHidden = true
         
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+        tableView.tableFooterView = spinner
+        tableView.tableFooterView?.isHidden = true
     }
     
-    //MARK: SEGUE
+    func showWarning(){
+        let dialogMessage = UIAlertController(title: "Connection Problem", message: "Cannot connect to server. Please check your connection and refresh.", preferredStyle: .alert)
+        let refresh = UIAlertAction(title: "Refresh", style: .default, handler: { [weak self] (action) -> Void in
+            self?.viewModel.getNextPage()
+        })
+        dialogMessage.addAction(refresh)
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailSeque" {
             let s = sender as! ListCell
             let detailVC = segue.destination as! RepoDetailViewController
             detailVC.vm = s.vm
-            
         }
     }
 }

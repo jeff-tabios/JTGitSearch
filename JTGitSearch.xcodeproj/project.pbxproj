@@ -21,6 +21,10 @@
 		626C3700230AA67C00B2C8E2 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */; };
 		626C3702230AA6AA00B2C8E2 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */; };
 		626C3704230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */; };
+		626C3708230C486F00B2C8E2 /* AnimatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C3707230C486F00B2C8E2 /* AnimatorController.swift */; };
+		626C370A230C4C0600B2C8E2 /* ReposListTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C3709230C4C0600B2C8E2 /* ReposListTransitionDelegate.swift */; };
+		626C370C230C5F0500B2C8E2 /* ReposListImageTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C370B230C5F0500B2C8E2 /* ReposListImageTransitionDelegate.swift */; };
+		626C370E230C636200B2C8E2 /* AuthorImageTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C370D230C636200B2C8E2 /* AuthorImageTransitionDelegate.swift */; };
 		62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */; };
 		62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F996312306DBF9008C7DF8 /* Assets.xcassets */; };
 		62F996352306DBF9008C7DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */; };
@@ -57,6 +61,10 @@
 		626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
 		626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListThumbTapDelegate.swift; sourceTree = "<group>"; };
+		626C3707230C486F00B2C8E2 /* AnimatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorController.swift; sourceTree = "<group>"; };
+		626C3709230C4C0600B2C8E2 /* ReposListTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListTransitionDelegate.swift; sourceTree = "<group>"; };
+		626C370B230C5F0500B2C8E2 /* ReposListImageTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListImageTransitionDelegate.swift; sourceTree = "<group>"; };
+		626C370D230C636200B2C8E2 /* AuthorImageTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorImageTransitionDelegate.swift; sourceTree = "<group>"; };
 		62F996272306DBF6008C7DF8 /* JTGitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTGitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F996312306DBF9008C7DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +118,8 @@
 				626C36CD23091DC400B2C8E2 /* ReposListSearchDelegate.swift */,
 				626C36CF23091DD600B2C8E2 /* ReposListTableDelegate.swift */,
 				626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */,
+				626C3709230C4C0600B2C8E2 /* ReposListTransitionDelegate.swift */,
+				626C370B230C5F0500B2C8E2 /* ReposListImageTransitionDelegate.swift */,
 			);
 			path = ReposExtensions;
 			sourceTree = "<group>";
@@ -121,6 +131,49 @@
 				626C36FD230A967300B2C8E2 /* ThumbImageView.swift */,
 			);
 			path = ReposViews;
+			sourceTree = "<group>";
+		};
+		626C3706230C485300B2C8E2 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				626C3707230C486F00B2C8E2 /* AnimatorController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		626C370F230C63A500B2C8E2 /* AuthorExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				626C370D230C636200B2C8E2 /* AuthorImageTransitionDelegate.swift */,
+			);
+			path = AuthorExtensions;
+			sourceTree = "<group>";
+		};
+		626C3710230C6FCD00B2C8E2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				626C36C8230901BF00B2C8E2 /* ReposViewController.swift */,
+				626C3705230C455800B2C8E2 /* ReposViews */,
+				626C36CC23091D9E00B2C8E2 /* ReposExtensions */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		626C3711230C6FD400B2C8E2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		626C3712230C6FDB00B2C8E2 /* Author */ = {
+			isa = PBXGroup;
+			children = (
+				626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */,
+				626C370F230C63A500B2C8E2 /* AuthorExtensions */,
+			);
+			path = Author;
 			sourceTree = "<group>";
 		};
 		62F9961E2306DBF6008C7DF8 = {
@@ -216,11 +269,10 @@
 		62F9964F2306EF88008C7DF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				626C36C8230901BF00B2C8E2 /* ReposViewController.swift */,
-				626C3705230C455800B2C8E2 /* ReposViews */,
-				626C36CC23091D9E00B2C8E2 /* ReposExtensions */,
-				626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */,
-				626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */,
+				626C3710230C6FCD00B2C8E2 /* List */,
+				626C3711230C6FD400B2C8E2 /* Detail */,
+				626C3712230C6FDB00B2C8E2 /* Author */,
+				626C3706230C485300B2C8E2 /* Animation */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,9 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626C370C230C5F0500B2C8E2 /* ReposListImageTransitionDelegate.swift in Sources */,
 				626C36C9230901BF00B2C8E2 /* ReposViewController.swift in Sources */,
+				626C370E230C636200B2C8E2 /* AuthorImageTransitionDelegate.swift in Sources */,
 				626C36AF2308DB7500B2C8E2 /* URLSessionMock.swift in Sources */,
+				626C3708230C486F00B2C8E2 /* AnimatorController.swift in Sources */,
 				626C36B02308DB7900B2C8E2 /* URLSessionDataTaskMock.swift in Sources */,
+				626C370A230C4C0600B2C8E2 /* ReposListTransitionDelegate.swift in Sources */,
 				62F9968E2308159B008C7DF8 /* RepoViewModel.swift in Sources */,
 				62F996742307049E008C7DF8 /* API.swift in Sources */,
 				626C36CB2309051300B2C8E2 /* ListCell.swift in Sources */,

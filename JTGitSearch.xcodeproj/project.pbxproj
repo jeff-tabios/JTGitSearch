@@ -17,6 +17,10 @@
 		626C36CB2309051300B2C8E2 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36CA2309051300B2C8E2 /* ListCell.swift */; };
 		626C36CE23091DC400B2C8E2 /* ReposListSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36CD23091DC400B2C8E2 /* ReposListSearchDelegate.swift */; };
 		626C36D023091DD600B2C8E2 /* ReposListTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36CF23091DD600B2C8E2 /* ReposListTableDelegate.swift */; };
+		626C36FE230A967300B2C8E2 /* ThumbImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36FD230A967300B2C8E2 /* ThumbImageView.swift */; };
+		626C3700230AA67C00B2C8E2 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */; };
+		626C3702230AA6AA00B2C8E2 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */; };
+		626C3704230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */; };
 		62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */; };
 		62F996322306DBF9008C7DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F996312306DBF9008C7DF8 /* Assets.xcassets */; };
 		62F996352306DBF9008C7DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F996332306DBF9008C7DF8 /* LaunchScreen.storyboard */; };
@@ -49,6 +53,10 @@
 		626C36CA2309051300B2C8E2 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		626C36CD23091DC400B2C8E2 /* ReposListSearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListSearchDelegate.swift; sourceTree = "<group>"; };
 		626C36CF23091DD600B2C8E2 /* ReposListTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListTableDelegate.swift; sourceTree = "<group>"; };
+		626C36FD230A967300B2C8E2 /* ThumbImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbImageView.swift; sourceTree = "<group>"; };
+		626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListThumbTapDelegate.swift; sourceTree = "<group>"; };
 		62F996272306DBF6008C7DF8 /* JTGitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTGitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F9962A2306DBF7008C7DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62F996312306DBF9008C7DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 			children = (
 				626C36CD23091DC400B2C8E2 /* ReposListSearchDelegate.swift */,
 				626C36CF23091DD600B2C8E2 /* ReposListTableDelegate.swift */,
+				626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */,
 			);
 			path = ReposExtensions;
 			sourceTree = "<group>";
@@ -201,6 +210,9 @@
 				626C36C8230901BF00B2C8E2 /* ReposViewController.swift */,
 				626C36CC23091D9E00B2C8E2 /* ReposExtensions */,
 				626C36CA2309051300B2C8E2 /* ListCell.swift */,
+				626C36FD230A967300B2C8E2 /* ThumbImageView.swift */,
+				626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */,
+				626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,9 +359,13 @@
 				62F9968C2308154E008C7DF8 /* ReposViewModel.swift in Sources */,
 				62F9968123078DF6008C7DF8 /* Repositories.swift in Sources */,
 				62F9967C230706B2008C7DF8 /* GitHubAPI.swift in Sources */,
+				626C3700230AA67C00B2C8E2 /* RepoDetailViewController.swift in Sources */,
 				626C36D023091DD600B2C8E2 /* ReposListTableDelegate.swift in Sources */,
+				626C36FE230A967300B2C8E2 /* ThumbImageView.swift in Sources */,
+				626C3702230AA6AA00B2C8E2 /* AuthorViewController.swift in Sources */,
 				626C36CE23091DC400B2C8E2 /* ReposListSearchDelegate.swift in Sources */,
 				62F9962B2306DBF7008C7DF8 /* AppDelegate.swift in Sources */,
+				626C3704230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension ReposViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.RepoViewModels.count
     }
@@ -18,6 +19,8 @@ extension ReposViewController: UITableViewDelegate, UITableViewDataSource {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListCell
         cell.vm = viewModel.RepoViewModels[indexPath.row]
+        cell.itemImage.cellIndex = indexPath.row
+        cell.itemImage.delegate = self
         return cell
         
     }

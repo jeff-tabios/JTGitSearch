@@ -11,9 +11,10 @@ import UIKit
 class ReposViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var sortButton: UIButton!
     let searchBar = UISearchBar()
-    var viewModel = ReposViewModel(api: API())
+    //    var viewModel = ReposViewModel(api: API())
+    var viewModel = ReposViewModel(api: API(session: URLSessionMock()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,25 +22,28 @@ class ReposViewController: UIViewController {
     }
     
     func setupViews(){
-//        viewModel.getNextPage()
+        viewModel.reload(with: "dragons")
         viewModel.refreshRepoList = { [weak self] () in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
         }
-        
         searchBar.delegate = self
         navigationItem.titleView = searchBar
+        sortButton.layer.cornerRadius = 22
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sort(_ sender: Any) {
+        
     }
-    */
-
+    
+    //MARK: SEGUE
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailSeque" {
+            let s = sender as! ListCell
+            let detailVC = segue.destination as! RepoDetailViewController
+            detailVC.vm = s.vm
+            
+        }
+    }
 }

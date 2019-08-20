@@ -96,28 +96,53 @@
                                     <outlet property="delegate" destination="cZM-bM-TMm" id="0Zf-aJ-jqX"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-im-IP7">
-                                <rect key="frame" x="351" y="820" width="44" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.04677283753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="QoM-zB-aC5"/>
-                                    <constraint firstAttribute="width" constant="44" id="pUa-Ok-8Gh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Sort">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="sort:" destination="cZM-bM-TMm" eventType="touchUpInside" id="WXt-Ra-oPw"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnG-jC-dUB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SNQ-et-7Te">
+                                        <rect key="frame" x="65" y="176" width="285" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="None"/>
+                                            <segment title="Descending"/>
+                                            <segment title="Ascending"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="15y-tp-NqW">
+                                        <rect key="frame" x="65" y="85" width="285" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="None"/>
+                                            <segment title="Forks"/>
+                                            <segment title="Stars"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sort by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNr-vO-EjC">
+                                        <rect key="frame" x="177" y="56" width="61" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-d8-RPV">
+                                        <rect key="frame" x="171" y="147" width="72" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KS8-kc-onF" firstAttribute="top" secondItem="ahV-nq-iqv" secondAttribute="top" id="38D-6f-is8"/>
                             <constraint firstItem="KS8-kc-onF" firstAttribute="trailing" secondItem="eCs-CN-pT5" secondAttribute="trailing" id="5O8-Th-lK6"/>
-                            <constraint firstItem="eCs-CN-pT5" firstAttribute="trailing" secondItem="2vw-im-IP7" secondAttribute="trailing" constant="19" id="ibR-82-P9Z"/>
-                            <constraint firstAttribute="bottom" secondItem="2vw-im-IP7" secondAttribute="bottom" constant="32" id="m4I-se-gFh"/>
+                            <constraint firstItem="KnG-jC-dUB" firstAttribute="leading" secondItem="eCs-CN-pT5" secondAttribute="leading" id="6ba-SE-6na"/>
+                            <constraint firstAttribute="bottom" secondItem="KnG-jC-dUB" secondAttribute="bottom" id="EzT-Zv-HtJ"/>
+                            <constraint firstItem="KnG-jC-dUB" firstAttribute="trailing" secondItem="eCs-CN-pT5" secondAttribute="trailing" id="VjB-eN-zz5"/>
+                            <constraint firstItem="KnG-jC-dUB" firstAttribute="top" secondItem="eCs-CN-pT5" secondAttribute="top" id="lTX-2h-FhQ"/>
                             <constraint firstItem="KS8-kc-onF" firstAttribute="leading" secondItem="eCs-CN-pT5" secondAttribute="leading" id="nqL-6c-1Oe"/>
                             <constraint firstAttribute="bottom" secondItem="KS8-kc-onF" secondAttribute="bottom" id="p9J-pv-fdr"/>
                         </constraints>
@@ -125,7 +150,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="1bh-WU-yLh"/>
                     <connections>
-                        <outlet property="sortButton" destination="2vw-im-IP7" id="OUK-hQ-2mk"/>
+                        <outlet property="orderBy" destination="SNQ-et-7Te" id="tV4-kL-wCG"/>
+                        <outlet property="searchSettings" destination="KnG-jC-dUB" id="gMH-eJ-ybQ"/>
+                        <outlet property="sortBy" destination="15y-tp-NqW" id="R8W-va-yat"/>
                         <outlet property="tableView" destination="KS8-kc-onF" id="zF3-cW-PTN"/>
                     </connections>
                 </viewController>

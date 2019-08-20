@@ -52,6 +52,10 @@ class RepoViewModelTests: XCTestCase {
         XCTAssertEqual("By: \((repositories?.items[0].owner.login)!)", sut?.author)
     }
     
+    func test_authorUrl(){
+        XCTAssertEqual(repositories?.items[0].owner.htmlURL, sut?.authorUrl)
+    }
+    
     func test_forks(){
         XCTAssertEqual("Forks: \((repositories?.items[0].forks)!)", sut?.forks)
     }

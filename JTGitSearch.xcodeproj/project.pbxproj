@@ -96,12 +96,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		626C36B42308F5AF00B2C8E2 /* Helper */ = {
+		626C36B42308F5AF00B2C8E2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				626C36B52308F5EC00B2C8E2 /* UIImageView+Cache.swift */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		626C36CC23091D9E00B2C8E2 /* ReposExtensions */ = {
@@ -112,6 +112,15 @@
 				626C3703230AAE0A00B2C8E2 /* ReposListThumbTapDelegate.swift */,
 			);
 			path = ReposExtensions;
+			sourceTree = "<group>";
+		};
+		626C3705230C455800B2C8E2 /* ReposViews */ = {
+			isa = PBXGroup;
+			children = (
+				626C36CA2309051300B2C8E2 /* ListCell.swift */,
+				626C36FD230A967300B2C8E2 /* ThumbImageView.swift */,
+			);
+			path = ReposViews;
 			sourceTree = "<group>";
 		};
 		62F9961E2306DBF6008C7DF8 = {
@@ -139,7 +148,7 @@
 				62F996512306EF97008C7DF8 /* Models */,
 				62F9964F2306EF88008C7DF8 /* Views */,
 				62F9964E2306EF7F008C7DF8 /* ViewModels */,
-				626C36B42308F5AF00B2C8E2 /* Helper */,
+				626C36B42308F5AF00B2C8E2 /* Helpers */,
 				62F9967123070432008C7DF8 /* Networking */,
 				62F9964D2306EF77008C7DF8 /* Storyboards */,
 				62F9964C2306EF70008C7DF8 /* Mock */,
@@ -208,9 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				626C36C8230901BF00B2C8E2 /* ReposViewController.swift */,
+				626C3705230C455800B2C8E2 /* ReposViews */,
 				626C36CC23091D9E00B2C8E2 /* ReposExtensions */,
-				626C36CA2309051300B2C8E2 /* ListCell.swift */,
-				626C36FD230A967300B2C8E2 /* ThumbImageView.swift */,
 				626C36FF230AA67C00B2C8E2 /* RepoDetailViewController.swift */,
 				626C3701230AA6AA00B2C8E2 /* AuthorViewController.swift */,
 			);

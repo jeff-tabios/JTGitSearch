@@ -26,7 +26,9 @@ class ReposViewController: UIViewController {
     }
     
     func setupViews(){
-        viewModel.reload(with: "dragons")
+        viewModel.reload(with: "tetris")
+        
+        //Closure calls
         viewModel.startGetRepoList = { [weak self] () in
             self?.tableView.tableFooterView?.isHidden = false
         }
@@ -40,10 +42,13 @@ class ReposViewController: UIViewController {
             self?.showWarning()
             self?.tableView.tableFooterView?.isHidden = true
         }
+        
+        //Search bar
         searchBar.delegate = self
         navigationItem.titleView = searchBar
         searchSettings.isHidden = true
         
+        //Spinner
         spinner.startAnimating()
         spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
         tableView.tableFooterView = spinner

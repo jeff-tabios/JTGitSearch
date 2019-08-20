@@ -15,7 +15,7 @@ extension ReposViewController: ThumbTapDelegate {
     func thumbTapped(cellIndex: Int) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let authorVC = storyBoard.instantiateViewController(withIdentifier: "authVC") as! AuthorViewController
-        authorVC.vm = viewModel.RepoViewModels[cellIndex]
+        authorVC.vm = viewModel.repoViewModels[cellIndex]
         self.present(authorVC, animated: true, completion: nil)
     }
 }

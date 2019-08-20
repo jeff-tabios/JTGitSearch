@@ -24,7 +24,7 @@ class ReposViewModelTests: XCTestCase {
     func test_getNextPage() {
         sut?.getNextPage()
         
-        XCTAssertEqual(sut?.RepoViewModels.count, 1)
+        XCTAssertEqual(sut?.repoViewModels.count, 1)
     }
 
 }

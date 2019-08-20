@@ -12,13 +12,13 @@ import UIKit
 extension ReposViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.RepoViewModels.count
+        return viewModel.repoViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListCell
-        cell.vm = viewModel.RepoViewModels[indexPath.row]
+        cell.vm = viewModel.repoViewModels[indexPath.row]
         cell.itemImage.cellIndex = indexPath.row
         cell.itemImage.delegate = self
         return cell
@@ -26,7 +26,7 @@ extension ReposViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastElement = viewModel.RepoViewModels.count - 1
+        let lastElement = viewModel.repoViewModels.count - 1
         if indexPath.row == lastElement {
             viewModel.getNextPage()
         }

@@ -9,8 +9,8 @@
 import UIKit
 
 class ListCell: UITableViewCell {
-
-    @IBOutlet weak var itemImage: UIImageView!
+    
+    @IBOutlet weak var itemImage: ThumbImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var forks: UILabel!

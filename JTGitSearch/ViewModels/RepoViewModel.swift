@@ -15,6 +15,7 @@ public protocol RepoDetail{
     var description: String? {get }
     var htmlUrl: String? {get }
     var author: String? {get }
+    var authorUrl: String? {get }
     var forks: String? {get }
     var stars: String? {get }
     var language: String? {get }
@@ -34,7 +35,10 @@ public extension RepoDetail{
         return repo.htmlURL
     }
     var author: String? {
-        return "By: " + repo.owner.login
+        return "Author: " + repo.owner.login
+    }
+    var authorUrl: String? {
+        return repo.owner.htmlURL
     }
     var forks: String? {
         return "Forks: \(repo.forks)"

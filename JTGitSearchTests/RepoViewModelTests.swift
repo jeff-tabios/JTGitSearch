@@ -49,7 +49,7 @@ class RepoViewModelTests: XCTestCase {
     }
     
     func test_author(){
-        XCTAssertEqual("By: \((repositories?.items[0].owner.login)!)", sut?.author)
+        XCTAssertEqual("Author: \((repositories?.items[0].owner.login)!)", sut?.author)
     }
     
     func test_authorUrl(){

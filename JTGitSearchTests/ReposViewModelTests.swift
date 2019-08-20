@@ -22,7 +22,7 @@ class ReposViewModelTests: XCTestCase {
     }
     
     func test_getNextPage() {
-        sut?.getNextPage()
+        sut?.reload(with: "test")
         
         XCTAssertEqual(sut?.repoViewModels.count, 1)
     }

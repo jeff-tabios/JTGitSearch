@@ -45,6 +45,7 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         imageView.contentMode = .scaleAspectFill
         imageView.frame = (fromDelegate == nil) ? CGRect(x: 0, y: 0, width: 0, height: 0) : fromDelegate!.imageWindowFrame()
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2
         containerView.addSubview(imageView)
         
         // 5: Create from screen snapshot
@@ -67,6 +68,7 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: {
             toSnapshot?.alpha = 1
             imageView.frame = toFrame
+            imageView.layer.cornerRadius = imageView.frame.size.width / 2
             
         }) {(finished) in
             

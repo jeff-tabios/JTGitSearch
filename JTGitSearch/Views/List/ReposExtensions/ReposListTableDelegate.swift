@@ -31,4 +31,8 @@ extension ReposViewController: UITableViewDelegate, UITableViewDataSource {
             viewModel.getNextPage()
         }
     }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 122
+    }
 }

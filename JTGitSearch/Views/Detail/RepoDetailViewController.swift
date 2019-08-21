@@ -25,6 +25,7 @@ class RepoDetailViewController: UIViewController {
         super.viewDidLoad()
         name.text = vm?.name
         userThumb.load(url: vm?.image, placeholder: UIImage(named: "noposter"))
+        userThumb.layer.cornerRadius = userThumb.frame.size.width / 2
         author.text = vm?.author
         forks.text = vm?.forks
         stars.text = vm?.stars

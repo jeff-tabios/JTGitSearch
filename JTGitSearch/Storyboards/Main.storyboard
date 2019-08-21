@@ -53,7 +53,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTK-g8-vvN" customClass="ThumbImageView" customModule="JTGitSearch" customModuleProvider="target">
+                                                <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTK-g8-vvN" customClass="ThumbImageView" customModule="JTGitSearch" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="9" width="100" height="100"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -169,10 +169,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="biV-lY-EF3">
-                                <rect key="frame" x="158.5" y="153" width="97" height="85"/>
+                                <rect key="frame" x="164.5" y="153" width="85" height="85"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="me7-ck-GCg"/>
+                                    <constraint firstAttribute="width" constant="85" id="me7-ck-GCg"/>
                                     <constraint firstAttribute="height" constant="85" id="ucI-sD-hbP"/>
                                 </constraints>
                             </imageView>
@@ -275,8 +275,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-KM-jRK">
-                                <rect key="frame" x="20" y="71" width="374" height="345"/>
+                                <rect key="frame" x="34.5" y="71" width="345" height="345"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="3QS-Gf-P0C"/>
+                                    <constraint firstAttribute="height" constant="345" id="Ado-bk-0d6"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Vlad Dracula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyg-Wm-RPZ">
                                 <rect key="frame" x="20" y="574" width="374" height="21"/>
@@ -315,7 +319,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aW9-BT-Qfn" firstAttribute="trailing" secondItem="xoF-KM-jRK" secondAttribute="trailing" constant="20" id="6MR-Kg-Wn1"/>
                             <constraint firstItem="Hud-Hf-CIT" firstAttribute="top" secondItem="GmC-rm-hFD" secondAttribute="bottom" constant="199" id="9Lp-Pc-LNi"/>
                             <constraint firstItem="GmC-rm-hFD" firstAttribute="leading" secondItem="aW9-BT-Qfn" secondAttribute="leading" constant="20" id="A0V-oi-4Om"/>
                             <constraint firstItem="GmC-rm-hFD" firstAttribute="top" secondItem="xoF-KM-jRK" secondAttribute="bottom" constant="187" id="KUB-ut-N9x"/>
@@ -323,9 +326,9 @@
                             <constraint firstItem="Hud-Hf-CIT" firstAttribute="centerX" secondItem="aW9-BT-Qfn" secondAttribute="centerX" id="XWI-nF-0Tu"/>
                             <constraint firstItem="xoF-KM-jRK" firstAttribute="top" secondItem="aW9-BT-Qfn" secondAttribute="top" constant="27" id="Xal-PC-Hw6"/>
                             <constraint firstItem="GmC-rm-hFD" firstAttribute="top" secondItem="Zyg-Wm-RPZ" secondAttribute="bottom" constant="8" id="bAF-09-P4k"/>
+                            <constraint firstItem="xoF-KM-jRK" firstAttribute="centerX" secondItem="aW9-BT-Qfn" secondAttribute="centerX" id="bco-sh-Z8s"/>
                             <constraint firstItem="aW9-BT-Qfn" firstAttribute="bottom" secondItem="Hud-Hf-CIT" secondAttribute="bottom" id="bdW-N3-9eK"/>
                             <constraint firstItem="aW9-BT-Qfn" firstAttribute="trailing" secondItem="GmC-rm-hFD" secondAttribute="trailing" constant="20" id="g13-a7-e8m"/>
-                            <constraint firstItem="xoF-KM-jRK" firstAttribute="leading" secondItem="aW9-BT-Qfn" secondAttribute="leading" constant="20" id="mzO-Nu-dIU"/>
                             <constraint firstItem="Zyg-Wm-RPZ" firstAttribute="leading" secondItem="aW9-BT-Qfn" secondAttribute="leading" constant="20" id="oaz-Ic-lyb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aW9-BT-Qfn"/>

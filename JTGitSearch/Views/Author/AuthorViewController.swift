@@ -15,11 +15,14 @@ class AuthorViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     
     var vm: RepoViewModel?
+    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        aImage.load(url: vm?.image, placeholder: UIImage(named: "noposter"))
+//        aImage.load(url: vm?.image, placeholder: UIImage(named: "noposter"))
+        aImage.image = image
         name.text = vm?.author
+        aImage.layer.cornerRadius = aImage.frame.size.width / 2
     }
     
     @IBAction func openUrl(_ sender: Any) {

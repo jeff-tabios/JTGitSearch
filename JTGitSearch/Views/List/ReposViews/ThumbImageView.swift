@@ -20,8 +20,10 @@ class ThumbImageView: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.layer.cornerRadius = self.frame.size.width / 2
         tapGestureRecognizer.addTarget(self, action: #selector(imageTapped(recognizer:)))
         self.addGestureRecognizer(tapGestureRecognizer)
+        self.isHidden = false
     }
     
     @objc func imageTapped(recognizer: UITapGestureRecognizer) {
